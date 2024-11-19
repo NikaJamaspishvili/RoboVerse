@@ -1,0 +1,221 @@
+.AboutCompanyWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.AboutCompanyDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.AboutCompanyImages{
+    display: flex;
+    gap:20px;
+    min-height: 400px;
+    height: auto;
+    width: 50%;
+    position: relative;
+}
+
+
+.AboutCompanyImages div{
+    background-color: rgb(195, 192, 192);
+    width: 290px;
+    height: 300px;
+    padding: 5px;
+    box-shadow: 1px 1px 1px 5px white;
+    clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 0 100%);
+}
+
+.AboutCompanyDiv div:nth-child(2){
+    margin-top: auto;
+    margin-bottom: 30px;
+}
+
+
+.AboutCompanyDiv section img{
+width: 100%;
+height: 100%;
+clip-path: inherit;
+object-fit: cover;
+}
+
+.AboutCompanyText{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    align-items: last baseline;
+    margin-right: 60px;
+}
+
+.AboutCompanyText h1{
+font-family: 'Orbitron';
+font-weight: 900;
+font-size: 1.8rem;
+}
+
+.AboutCompanyText p{
+font-family: 'Inter';
+font-weight: 400;
+color: rgba(255, 255, 255, 0.85);
+font-size: 1rem;
+width: 70%;
+}
+
+.AboutCompanyText button{
+background: linear-gradient(99.99deg, #B936F5 -21.45%, #C64C85 100%, #F1005B 100%);
+border-radius: 3.33594px;
+width: 90px;
+height: 35px;
+background: linear-gradient(99.99deg, #B936F5 -21.45%, #C64C85 100%, #F1005B 100%);
+border-radius: 3.33594px;
+font-family: 'Inter';
+font-weight: 700;
+font-size: 11.0622px;
+border: 0;
+color: #FFFFFF;
+cursor: pointer;
+}
+
+.OtherInfoDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/* starting the border animation */
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+/* The .OtherInfoDiv_pseudo styles */
+.OtherInfoDiv_pseudo {
+    --angle: 0deg;
+    margin-top: 150px;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    padding: 5px;
+    background-image: conic-gradient(from var(--angle), rgb(255, 0, 102), rgb(138, 43, 226), rgb(75, 0, 130), rgb(255, 105, 180));
+    animation: spin 3s linear infinite;
+}
+
+/* Keyframes for the spinning effect */
+@keyframes spin {
+    0% {
+        --angle: 0deg;
+    }
+    100% {
+        --angle: 360deg;
+    }
+}
+
+
+.OtherInfoDiv h1{
+position: relative;
+font-family: 'Orbitron';
+font-style: normal;
+font-weight: 600;
+font-size: 1.7rem;
+color: #FFFFFF;
+width: 100%;
+text-align: center;
+}
+
+.ImageGrid{
+    display: grid;
+    grid-template-columns: repeat(2,200px);
+    gap: 5px;
+}
+
+.ImageGrid img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.ImageGrid img:nth-child(1){
+
+  transform: rotate(-5deg);
+}
+.ImageGrid img:nth-child(3){
+ transform: rotate(-5deg);
+}
+.ImageGrid img:nth-child(2){
+    transform: rotate(-5deg);
+}
+
+.ImageGrid img:nth-child(4){
+    transform: rotate(5deg);
+}
+
+
+@media only screen and (max-width:850px){
+
+    .AboutCompanyDiv{
+        flex-direction: column;
+        align-items: center;
+        justify-content: none;
+        gap: 50px;
+    }
+
+    .AboutCompanyText{
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    .AboutCompanyText button{
+        margin-top: 20px;
+        width: 150px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .AboutCompanyImages{
+        width: 100%;
+        min-height: auto;
+        justify-content: center;
+    }
+
+    .AboutCompanyImages div{
+        width: 150px;
+        height: 200px;
+    }
+
+    .AboutCompanyDiv div:nth-child(2){
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+
+    .OtherInfoDiv{
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 0px;
+    }
+
+    .OtherInfoDiv_pseudo{
+    margin-top: 100px;
+    }
+
+    .ImageGrid{
+        grid-template-columns: repeat(2,100px);
+    }
+
+    .ImageGrid img{
+        width: 100px;
+        height: 100px;
+    }
+}

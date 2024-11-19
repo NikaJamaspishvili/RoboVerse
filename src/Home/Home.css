@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.HomeWrapper{
+  width: 100%;
+  height: auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #010208 16.39%, #010206 20.51%, #040008 24.79%, #010101 30.46%, #010101 34.11%, #010101 36.21%, #010101 100%);
+  gap: 120px;
+  position: relative;
+}
+
+.circleFog{
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  top: -320px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(170, 20, 240, 0.5) 0%, rgba(170, 20, 240, 0) 95%);
+}
+
+.circleFog2{
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  top: 900px;
+  left: -400px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(170, 20, 240, 0.5) 0%, rgba(170, 20, 240, 0) 95%);
+}
+
+.circleFog3{
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  top: 550px;
+  right: -400px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(170, 20, 240, 0.5) 0%, rgba(170, 20, 240, 0) 95%);
+}
+
+.circleFog4{
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  top: 1800px;
+  left:-400px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(170, 20, 240, 0.5) 0%, rgba(170, 20, 240, 0) 95%);
+}
+
+.circleFog5{
+  position: absolute;
+  width: 650px;
+  height: 500px;
+  top: 2000px;
+  right:-400px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(170, 20, 240, 0.5) 0%, rgba(170, 20, 240, 0) 95%);
+}
+
+@media only screen and (max-width:850px){
+  .HomeWrapper{
+    gap: 50px;
+  }
+
+  .circleFog4{
+    left:-550px;
+  }
+
+  .circleFog5{
+    display: none;
+  }
+}

@@ -1,0 +1,7 @@
+.AboutWrapper{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-top:1px solid gray;
+    gap: 100px;
+}
