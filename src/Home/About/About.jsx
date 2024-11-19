@@ -54,9 +54,9 @@ const AboutCompany = () => {
      <div className="AboutCompanyDiv" ref={containerRef}>
       <motion.section style={{translateX: imageSectionValue}} className="AboutCompanyImages">
         
-        <div><img loading="lazy" src="../../../public/images/futuristic robot lab.jpg" alt="Robot Construction Image" /></div>
+        <div><img loading="lazy" src="/images/futuristic robot lab.jpg" alt="Robot Construction Image" /></div>
         
-       <div><img loading="lazy" src="../../../public/images/robotConstruction.jpg" alt="Robot Construction Image" /></div>
+       <div><img loading="lazy" src="/images/robotConstruction.jpg" alt="Robot Construction Image" /></div>
       </motion.section>
       <motion.section style={{translateX: textSectionValue}} className="AboutCompanyText">
         <h1>High Quality Robots</h1>
@@ -80,10 +80,10 @@ const AboutCompany = () => {
      <div className="OtherInfoDiv">
         <h1>Awesome Experience with Us</h1>
         <div className="ImageGrid">
-        <img loading="lazy" src="../../../public/images/robot with human.jpg" alt="" />
-        <img loading="lazy" src="../../../public/images/robot with woman.jpg" alt="" />
-        <img loading="lazy" src="../../../public/images/robot with men.jpg" alt="" />
-        <img loading="lazy" src="../../../public/images/robot dj.jpg" alt="" />
+        <img loading="lazy" src="/images/robot with human.jpg" alt="" />
+        <img loading="lazy" src="/images/robot with woman.jpg" alt="" />
+        <img loading="lazy" src="/images/robot with men.jpg" alt="" />
+        <img loading="lazy" src="/images/robot dj.jpg" alt="" />
         </div>
      </div>
      </motion.div>

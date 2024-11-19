@@ -80,9 +80,9 @@ const NavbarLinksVariants = {
     <section className="WebsiteTraffickSection">
     
     <div className="userImages">
-    <img src="../../public/images/men.jpg" alt="human" />
-    <img src="../../public/images/group.jpg" alt="human" />
-    <img src="../../public/images/woman.jpg" alt="human" />
+    <img src="/images/men.jpg" alt="human" />
+    <img src="/images/group.jpg" alt="human" />
+    <img src="/images/woman.jpg" alt="human" />
     </div>
     
     <i class="fa-solid fa-circle"></i>
