@@ -75,24 +75,36 @@
 }
 
 .AboutRobotWrapper section div:nth-child(1){
-    background-image: url('../../../public/images/robot\ in\ household.jpg');
+    background-image: url('/images/robot\ in\ household.jpg');
     background-size:cover;
     object-fit: cover; /* Crops and centers the image without distortion */
 }
 .AboutRobotWrapper section div:nth-child(2){
-    background-image: url('../../../public/images/robot\ holding\ gun.jpg');
+    background-image: url('/images/robot\ holding\ gun.jpg');
     background-size:cover;
     background-repeat: no-repeat;
 }
 .AboutRobotWrapper section div:nth-child(3){
-    background-image: url('../../../public/images/companion\ robot.jpg');
+    background-image: url('/images/companion\ robot.jpg');
     background-size:cover;
     background-repeat: no-repeat;
 }
 .AboutRobotWrapper section div:nth-child(4){
-    background-image: url('../../../public/images/education\ robot.jpg');
+    background-image: url('/images/education\ robot.jpg');
     background-size:cover;
     background-repeat: no-repeat;
+}
+
+@media (hover:hover){
+    .AboutRobotWrapper section div:hover{
+     transform: scale(1.05);
+     transition: all 0.2s ease-in-out;
+    }
+
+    .AboutRobotWrapper section div:not(:hover){
+        transform: scale(1);
+        transition: all 0.2s ease-in;
+    }
 }
 
 @media only screen and (max-width:850px){
