@@ -1,0 +1,74 @@
+.companyOverviewWrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.companyOverviewWrapper img{
+    width: 50px;
+}
+
+.leftSection{
+display: flex;
+flex-direction: column;
+gap: 30px;
+justify-content: center;
+}
+
+.leftSection h1{
+font-family: 'Orbitron';
+font-style: normal;
+font-weight: 700;
+color: #FFFFFF;
+font-size: 2.3rem;
+max-width: 80%;
+}
+
+.leftSection p{
+font-family: 'inter';
+font-style: normal;
+font-weight: 400;
+color: rgba(255, 255, 255, 0.85);
+font-size: 1.3rem;
+width: 80%;
+}
+
+.rightSection{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 50px;
+}
+
+.rightSection div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.rightSection div p{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+color: #FFFFFF;
+font-size: 0.8rem;
+}
+
+.rightSection div img{
+    width: 100px;
+}
+
+
+@media only screen and (max-width:850px){
+  .companyOverviewWrapper{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 120px;
+  }
+
+.leftSection{
+    align-items: center;
+}
+
+}

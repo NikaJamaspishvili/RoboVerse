@@ -69,6 +69,39 @@
   background: radial-gradient(50% 50% at 50% 50%, rgba(170, 20, 240, 0.5) 0%, rgba(170, 20, 240, 0) 95%);
 }
 
+.circleFog6{
+  position: absolute;
+  width: 650px;
+  height: 500px;
+  top: 2500px;
+  right:-400px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(170, 20, 240, 0.5) 0%, rgba(170, 20, 240, 0) 95%);
+}
+
+.circleFog7{
+  position: absolute;
+  width: 650px;
+  height: 500px;
+  top: 2500px;
+  left:-400px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(170, 20, 240, 0.5) 0%, rgba(170, 20, 240, 0) 95%);
+}
+
+.circleFog8{
+  position: absolute;
+  width: 650px;
+  height: 500px;
+  top: 3100px;
+  left:-400px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(170, 20, 240, 0.5) 0%, rgba(170, 20, 240, 0) 95%);
+}
+
 @media only screen and (max-width:850px){
   .HomeWrapper{
     gap: 50px;
@@ -80,5 +113,19 @@
 
   .circleFog5{
     display: none;
+  }
+
+  .circleFog6{
+    top: 3500px;
+  }
+
+  .circleFog7{
+    top: 4000px;
+  }
+
+  .circleFog8{
+    top: 4500px;
+    left: auto;
+    right: -400px;
   }
 }

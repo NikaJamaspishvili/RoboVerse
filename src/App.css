@@ -9,6 +9,6 @@ body{
     width: 90%;
     margin: 0 auto;
     max-width: 1000px;
-    overflow-x: hidden;
-    border: 1px solid red;
+    overflow: hidden;
+    border: 1px solid blue;
 }

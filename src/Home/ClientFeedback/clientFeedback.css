@@ -1,0 +1,124 @@
+.clientFeedbackWrapper{
+box-sizing: border-box;
+background: linear-gradient(180deg, #AA14F0 -42.59%, rgba(0, 0, 0, 0) -42.59%, #AA14F0 -42.58%, rgba(170, 20, 240, 0.18) 4.35%, rgba(151, 60, 68, 0.055) 99.99%, rgba(185, 54, 245, 0) 100%);
+border-radius: 7;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 30px;
+padding-top: 20px;
+border-radius: 20px;
+border: 1px solid #430460;
+}
+
+.clientFeedbackWrapper h1{
+font-family: 'Orbitron';
+font-style: normal;
+font-weight: 700;
+color: #FFFFFF;
+font-size: 1.7rem;
+}
+
+.clientFeedbackWrapper > p{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 1rem;
+text-align: center;
+color: rgba(255, 255, 255, 0.85);
+width: 60%;
+}
+
+.feedbackCards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+}
+
+.feedbackCards > div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: first baseline;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: -40px;
+    background: linear-gradient(180deg, #AA14F0 -42.59%, rgba(0, 0, 0, 0) -42.59%, #CB8DE8 -42.58%, rgba(203, 143, 232, 0.18) 4.35%, rgba(151, 60, 68, 0.055) 99.99%, rgba(199, 137, 228, 0) 100%);
+    backdrop-filter: blur(5.71745px);
+    border:1px solid #430460;
+}
+
+.feedbackCards > div > div{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: auto;
+}
+
+.feedbackCards > div > div img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feedbackCards > div > div h1{
+    font-size: 0.8rem;
+    font-family: 'inter';
+}
+
+.feedbackCards > div > div p{
+  font-size: 0.7rem;
+  font-family: 'inter';
+  color: #EB4468;
+}
+
+
+.feedbackCards > div h3{
+ font-size: 0.7rem;
+ font-family: 'inter';
+ font-weight: 700;
+}
+
+.feedbackCards > div span{
+color: #F7B603;
+}
+
+.feedbackCards > div > p{
+    font-family: 'inter';
+    font-size: 0.75rem;
+    width: 80%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width:850px){
+    .feedbackCards{
+        gap: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(235px, 50%)); /* Minimum width of 200px */
+        justify-content: center;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .feedbackCards > div{
+        margin-bottom: 20px;
+        min-width: 235px;
+        transform: scale(1.1);
+    }
+
+
+   .clientFeedbackWrapper h1{
+    text-align: center;
+   }
+
+}

@@ -13,7 +13,10 @@ function Home(){
     <div className="circleFog4"></div>
     <div className="circleFog5"></div>
     <About />
+    <div className="circleFog6"></div>
+    <div className="circleFog7"></div>
     <FeedBack />
+    <div className="circleFog8"></div>
  </div>
 }
 

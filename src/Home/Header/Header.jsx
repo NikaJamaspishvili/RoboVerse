@@ -65,7 +65,7 @@ const NavbarLinksVariants = {
 
      <div className="HeroSectionRight">
        <Canvas id="cuteRobotCanvas" camera={{ position: [1, 5,3], fov: 75 }}>
-       <OrbitControls enableZoom/>
+       <OrbitControls enableZoom={false}/>
        <ambientLight />
 
         <Suspense fallback={<Html center>{progress.toFixed(1)}% loaded</Html>}>

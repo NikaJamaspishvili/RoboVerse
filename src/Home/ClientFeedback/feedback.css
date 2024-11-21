@@ -1,3 +1,7 @@
 .feedbackWrapper{
+    margin-top: 0px;
     color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
