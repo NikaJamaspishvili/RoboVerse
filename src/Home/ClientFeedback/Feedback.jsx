@@ -18,9 +18,7 @@ const ClientFeedBack = () =>{
 <section className="feedbackCards">
        <div className="firstFeedbackCard">
         <h3><span>starstar</span>star</h3>
-        <p>“I know in real-time where the money is spent,and
-            I don’t have to lend out the company’s credit card
-            anymore. What a relief!”</p>
+        <p>“These robots are a game-changer. Superior quality, flawless performance, and the price is shockingly affordable. Worth every penny!”</p>
         <div>
           <img src="/images/firstgirl.jpg"/>
           <section>
@@ -32,9 +30,7 @@ const ClientFeedBack = () =>{
 
        <div className="secondFeedbackCard">
         <h3><span>starstar</span>star</h3>
-        <p>“VISUALS are much better. The improvements 
-          in optics and resolution and much more than a modern
-           console generation leap.”</p>
+        <p>“The robots are top-notch. They offer amazing performance, are incredibly precise, and yet cost much less than expected. A great deal!”</p>
         <div>
           <img src="/images/secondgirl.jpg" />
           <section>
@@ -46,7 +42,7 @@ const ClientFeedBack = () =>{
 
        <div className="thirdFeedbackCard">
         <h3><span>starstar</span>star</h3>
-        <p>“I can actually see the improvement in the graphics, not having the external sensors is a big plus.”</p>
+        <p>“Impressed by these robots! The quality is unbeatable, and they work flawlessly. The price is incredibly low for such advanced technology.”</p>
         <div>
           <img src="/images/thirdgirl.jpg" />
           <section>
