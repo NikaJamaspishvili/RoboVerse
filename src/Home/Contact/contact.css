@@ -1,0 +1,256 @@
+.contactWrapper{
+    background: linear-gradient(180deg, #AA14F0 -42.59%, rgba(0, 0, 0, 0) -42.59%, #AA14F0 -42.58%, rgba(170, 20, 240, 0.18) 4.35%, rgba(151, 60, 68, 0.055) 99.99%, rgba(185, 54, 245, 0) 100%);
+    border-radius: 8px;
+    display: flex;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.contactWrapper > img{
+    width:50%;
+    max-height: 412px;
+    object-fit: cover;
+    border-bottom-right-radius: 8px;
+}
+
+.contactWrapper section{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 30px;
+}
+
+.contactWrapper section h1{
+font-family: 'Orbitron';
+font-style: normal;
+font-weight: 700;
+font-size:2rem;
+color: #FFFFFF;
+max-width: 350px;
+width: 100%;
+}
+
+.contactWrapper section p{
+font-family: 'Oswald';
+font-style: normal;
+font-weight: 400;
+font-size: 1rem;
+color: rgba(255, 255, 255, 0.85);
+text-align: left;
+max-width: 350px;
+}
+
+.contactWrapper section div{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.contactWrapper section div textarea{
+background: linear-gradient(180deg, #AA14F0 -42.59%, rgba(0, 0, 0, 0) -42.59%, #CB8DE8 -42.58%, rgba(203, 143, 232, 0.18) 4.35%, rgba(151, 60, 68, 0.055) 99.99%, rgba(199, 137, 228, 0) 100%);
+box-shadow: inset 0px -9.72759px 16.2127px rgba(255, 255, 255, 0.03);
+backdrop-filter: blur(6.07974px);
+border-radius: 2px;
+border: 0;
+outline: 0;
+resize: none;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+letter-spacing: -0.07em;
+color: rgba(224, 163, 201, 0.56);
+padding: 10px;
+height: 100%;
+word-break: break-all;
+word-wrap: break-word;
+}
+
+.contactWrapper section div button{
+    background: linear-gradient(99.99deg, #B936F5 -21.45%, #C64C85 100%, #F1005B 100%);
+    border-radius: 3px;
+    width: 120px;
+    height: 40px;
+    border: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size:0.8rem;
+    color: #F4F9FE;
+    cursor: pointer;
+    position: relative;
+}
+#spinner{
+    color: white;
+    animation: spinner 0.7s linear infinite, scale-up 0.7s ease-out;
+    font-size: 1.2rem;
+}
+
+#checkmark{
+    animation:scale 0.5s ease-in-out;
+    font-size: 1.2rem;
+}
+
+#message{
+    animation: scale 0.5s ease;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: row;
+}
+
+#warningWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:15px;
+    position: relative;
+    height: 100px;
+}
+
+#warningMessage{
+  text-align: center;
+  color: yellow;
+  animation: warning-scale-computer 5s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+}
+
+@keyframes scale-up{
+    from {
+      transform: scale(0) rotate(0deg);
+      opacity: 0;
+    }
+    to{
+        transform: scale(1) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+@keyframes scale{
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes spinner{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes warning-scale-mobile{
+    0%{
+        transform: scale(0.8) translate(-50%);
+        opacity: 0;
+     }
+     10%{
+        transform: scale(1) translate(-50%);
+        opacity: 1;
+     }
+    
+    90%{
+        transform: scale(1) translate(-50%);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0.8) translate(-50%);
+        opacity: 0;
+    }
+}
+
+@keyframes warning-scale-computer{
+  0%{
+    opacity: 0;
+    transform:scale(0.8);
+  }
+  10%{
+    opacity: 1;
+    transform: scale(1);
+  }
+  90%{
+    opacity: 1;
+    transform: scale(1);
+  }
+  100%{
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+.contactWrapper section .contactLinks{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contactLinks img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:750px){
+    .contactWrapper{
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 30px;
+        gap: 60px;
+    }
+
+   .contactWrapper > img{
+    width: 80%;
+   }
+
+   .contactWrapper section{
+    width: 100%;
+    padding: 0px;
+    align-items: center;
+   }
+
+   .contactWrapper section h1{
+    text-align: center;
+   }
+
+   .contactWrapper section p{
+    text-align: center;
+   }
+
+   .contactWrapper section div{
+   display: flex;
+   flex-direction: column;
+   }
+
+   .contactWrapper section  .contactLinks{
+    flex-direction: row;
+    margin-top: 30px;
+   }
+
+   .contactLinks img{
+    width: 60px;
+    height: 60px;
+   }
+
+   #warningMessage{
+    font-size:0.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    animation: warning-scale-mobile 5s ease;
+   }
+
+   #warningWrapper{
+    transform: scale(1.2);
+   }
+
+}

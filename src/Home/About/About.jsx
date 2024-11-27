@@ -11,8 +11,8 @@ import { useEffect, useRef } from "react";
 
 
 //main about component which is root for all other components
-const About = () => {
-    return <div className="AboutWrapper">
+const About = ({bodyRef}) => {
+    return <div className="AboutWrapper" ref={bodyRef}>
         <AboutCompany />
         <AboutRobot />
     </div>
@@ -116,7 +116,7 @@ const AboutRobot = () => {
     }
     },[isInView]);
 
-    return <div className="AboutRobotWrapper">
+    return <div className="AboutRobotWrapper" >
     <h1>Different species:</h1>
 
     <motion.section ref={sectionRef} variants={cardAnimationVariants} initial='hidden' animate={mainControls}>

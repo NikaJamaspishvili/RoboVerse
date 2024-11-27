@@ -5,10 +5,13 @@ body{
     width: 100vw;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .FirstWrapper{
     width: 90%;
     margin: 0 auto;
     max-width: 1000px;
     overflow: hidden;
-    border: 1px solid blue;
 }
