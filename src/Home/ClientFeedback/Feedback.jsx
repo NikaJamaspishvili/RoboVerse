@@ -1,7 +1,7 @@
 //css imports
 import "./feedback.css";
 import "./companyOverview.css";
-import "./ClientFeedBack.css";
+import "./clientFeedback.css";
 
 //framer motion imports
 import {motion,useAnimation,useTransform,useInView} from "framer-motion";
