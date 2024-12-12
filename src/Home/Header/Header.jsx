@@ -7,6 +7,7 @@ import {motion} from 'framer-motion';
 
 //react imports
 import { useEffect, useState,Suspense } from "react";
+import {useNavigate} from "react-router-dom";
 
 //3D modeling imports
 import {Canvas} from '@react-three/fiber';
@@ -18,6 +19,8 @@ const Header = ({ExploreBtnClick,ContactBtnClick})=>{
 const {progress,active} = useProgress();
 const [showLinks,setShowLinks] = useState(false);
 const [animating,setAnimating] = useState(false);
+
+let history = useNavigate();
 
 const HeroParentVariants = {
   hidden: {opacity: 0},
@@ -37,6 +40,10 @@ const NavbarLinksVariants = {
 function onBtnClick(){
    ExploreBtnClick();
 }
+
+function onShopBtnClick(){
+  history('/shop');
+}
   
 
   return <div className="Home_header">
@@ -49,7 +56,7 @@ function onBtnClick(){
     {showLinks || window.innerWidth > 850 ? <motion.div initial="hidden" animate="show" className="NavbarLinks">  
       <motion.p variants={NavbarLinksVariants} transition={{duration: 1.5,delay:0}} onClick={onBtnClick}>About</motion.p>
       <motion.p variants={NavbarLinksVariants} transition={{duration: 1.5,delay:0.3}} onClick={ContactBtnClick}>Contact</motion.p>
-      <motion.p variants={NavbarLinksVariants} transition={{duration: 1.5,delay:0.6}}>Shop</motion.p>   
+      <motion.p variants={NavbarLinksVariants} transition={{duration: 1.5,delay:0.6}} onClick={onShopBtnClick}>Shop</motion.p>   
       <motion.button className={animating ? "animating" : null} onAnimationStart={()=>setAnimating(true)} onAnimationComplete={()=>setAnimating(false)} initial={{opacity:0}} animate={{opacity:1}} transition={{duration: 1.5,delay:1.8}} onClick={()=>setShowLinks(false)}>Sign Up</motion.button>
       </motion.div>:null}
       

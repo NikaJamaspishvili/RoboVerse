@@ -1,0 +1,12 @@
+.Shop_Wrapper{
+background-color: black;
+display: flex;
+flex-direction: column;
+gap: 80px;
+}
+
+@media only screen and (min-width:850px){
+    .Shop_Wrapper{
+        gap: 50px;
+    }
+}

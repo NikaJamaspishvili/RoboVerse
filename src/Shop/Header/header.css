@@ -1,0 +1,100 @@
+.Shop_header{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    position: fixed;
+    width: 90%;
+    max-width:1000px;
+    margin: 0 auto;
+}
+
+.Shop_header section div{
+    display: none;
+}
+
+.Shop_header h1{
+    color:#FFFFFF;
+    font-size: 2.5rem;
+    font-family: "IM FELL Great Primer SC";
+    font-weight: 400;
+    margin: 0;
+}
+
+
+.Shop_header button{
+    background: linear-gradient(99.05deg, #BC3CD8 0.07%, #C54B8C 106.32%);
+    border-radius: 3.33594px;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    color:#FFFFFF;
+    font-family: 'Inter';
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+@media only screen and (min-width:850px){
+
+    .Shop_header section{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .Shop_header h1{
+        display: none;
+    }
+
+    .Shop_header section div{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+
+    .Shop_header section div i{
+        font-size:0.6rem;
+        color: #C54B8C;
+    }
+
+  .Shop_header section div p{
+    display: block;
+    font-size: 1.1rem;
+    font-family: 'Inter';
+    color: white;
+  }
+
+  .Shop_header button{
+    width: 100px;
+  }
+}
+
+@media (hover:hover){
+    .Shop_header section div:hover{
+        background: linear-gradient(99.05deg, #C824EC 0.07%, #DF308D 106.32%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        transform: scale(1.05);
+        }
+
+    .Shop_header button:hover i{
+        transition: all 0.5s ease;
+       transform: rotate(360deg) scale(1.5);
+    }
+
+    .Shop_header button:not(:hover) i{
+        transition: all 0.5s ease;
+        transform: rotate(0deg) scale(1);
+    }
+}
