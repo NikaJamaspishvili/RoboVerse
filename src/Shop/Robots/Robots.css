@@ -1,0 +1,93 @@
+.robotModelsDiv{
+    margin-top: -30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+    margin-top: 60px;
+}
+
+.robotModelsDiv div{
+ display: flex;
+ gap: 100px;
+ justify-content: center;
+}
+
+.robotModelsDiv div section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    width: 30%;
+    align-items: first baseline;
+}
+
+.robotModelsDiv div section button{
+    width:150px;
+    height:50px;
+    font-size: 1rem;
+    background: linear-gradient(99.05deg, #BC3CD8 0.07%, #C54B8C 106.32%);
+    border-radius: 3.33594px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    color:#FFFFFF;
+    font-family: 'Inter';
+    font-weight: bolder;
+    font-size: 0.8rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.robotModelsDiv div h1{
+    text-align: center;
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3rem;
+    color:white;
+    margin: 0;
+}
+
+.robotModelsDiv div img{
+    width:40%;
+    border-radius:20px;
+    border: 1px solid purple;
+}
+
+
+@media only screen and (max-width:750px){
+
+  .robotModelsDiv{
+    gap: 100px;
+  }
+
+  .robotModelsDiv div{
+    flex-direction: column;
+    gap: 50px;
+    border: 1px solid red;
+    align-items: center;
+  }
+
+  .robotModelsDiv div section{
+    align-items: center;
+    gap: 30px;
+  }
+
+  .robotModelsDiv div section h1{
+    font-size: 2.5rem;
+  }
+
+  .robotModelsDiv div img{
+    width: 80%;
+    order: 1;
+  }
+}
+
+
+@media (hover:hover){
+    .robotModelsDiv div section button:hover{
+      filter: brightness(0.9);
+    }
+}

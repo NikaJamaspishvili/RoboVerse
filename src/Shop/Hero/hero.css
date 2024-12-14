@@ -6,6 +6,8 @@
     justify-content: space-between;
     gap: 80px;
     margin-top: 150px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid rgb(126, 124, 124);
 }
 
 .Shop_hero section{

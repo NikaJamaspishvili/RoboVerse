@@ -8,6 +8,7 @@
     width: 90%;
     max-width:1000px;
     margin: 0 auto;
+    z-index: 1;
 }
 
 .Shop_header section div{
@@ -41,7 +42,6 @@
     position: relative;
 }
 
-
 @media only screen and (min-width:850px){
 
     .Shop_header section{
@@ -63,8 +63,11 @@
     }
 
     .Shop_header section div i{
-        font-size:0.6rem;
-        color: #C54B8C;
+        font-size:0.55rem;
+        background: linear-gradient(99.05deg, #BC3CD8 0.07%, #C54B8C 106.32%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
   .Shop_header section div p{

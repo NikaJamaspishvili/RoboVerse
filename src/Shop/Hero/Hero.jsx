@@ -28,9 +28,11 @@ let childVariants={
 let imageVariants={
     hidden:{opacity:0,
             rotateY:0,
+            marginLeft:200
         },
     show:{opacity:1,
         rotateY:360,
+        marginLeft:0,
         transition:{
             duration:1.5
         }

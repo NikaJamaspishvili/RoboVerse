@@ -1,6 +1,11 @@
 const Household=()=>{
     return <div>
-        <h1 style={{color:"white"}}>Household</h1>
+    <section>
+    <h1>Household</h1>
+    <button>View Model</button>
+    </section>
+
+    <img src="/images/household.png" alt="robot image" />
     </div>
 }
     

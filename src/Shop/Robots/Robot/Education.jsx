@@ -1,6 +1,11 @@
 const Education=()=>{
     return <div>
-        <h1 style={{color:"white"}}>Education</h1>
+    <img src="/images/education.png" alt="robot image" />
+
+    <section>
+    <h1>Education</h1>
+    <button>View Model</button>
+    </section>
     </div>
 }
 

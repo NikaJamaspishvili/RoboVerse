@@ -1,6 +1,11 @@
 const Companion=()=>{
 return <div>
-    <h1 style={{color:"white"}}>Companion</h1>
+    <section>
+    <h1>Companion</h1>
+    <button>View Model</button>
+    </section>
+
+    <img src="/images/companion.png" alt="robot image" />
 </div>
 }
 

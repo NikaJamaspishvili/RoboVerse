@@ -1,7 +1,12 @@
 const Security=()=>{
     return <div>
-        <h1 style={{color:"white"}}>Security</h1>
-    </div>
+<img src="/images/security.png" alt="robot image" />
+
+<section>
+<h1>Security</h1>
+<button>View Model</button>
+</section>   
+</div>
 }
 
 export default Security;

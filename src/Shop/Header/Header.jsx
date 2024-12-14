@@ -26,7 +26,7 @@ const Header = ()=>{
 
     <motion.section variants={parentVariants} initial="hidden" animate="show">
         <motion.div variants={childVariants}><i class="fa-solid fa-circle"></i><p>Educational</p></motion.div>
-        <motion.div variants={childVariants}><i class="fa-solid fa-circle"></i><p>Companion</p></motion.div >
+        <motion.div variants={childVariants} id="companion"><i class="fa-solid fa-circle"></i><p>Companion</p></motion.div >
         <motion.div variants={childVariants}><i class="fa-solid fa-circle"></i><p>Household</p></motion.div >
         <motion.div variants={childVariants}><i class="fa-solid fa-circle"></i><p>Security</p></motion.div >
     </motion.section>
