@@ -1,9 +1,13 @@
 import "./header.css";
 
+import { useNavigate } from "react-router-dom";
+
 //animation imports
 import {motion} from 'framer-motion';
 
 const Header = ()=>{
+
+  let history = useNavigate();
 
   let parentVariants={
     hidden:{opacity: 0},
@@ -20,8 +24,8 @@ const Header = ()=>{
     show:{opacity: 1,marginTop:0},
   }
 
-
   return <div className="Shop_header">
+
     <h1>RoboVerse</h1>
 
     <motion.section variants={parentVariants} initial="hidden" animate="show">
@@ -30,7 +34,7 @@ const Header = ()=>{
         <motion.div variants={childVariants}><i class="fa-solid fa-circle"></i><p>Household</p></motion.div >
         <motion.div variants={childVariants}><i class="fa-solid fa-circle"></i><p>Security</p></motion.div >
     </motion.section>
-    <motion.button variants={{hidden:{opacity: 0,marginTop:-200},show:{opacity:1,marginTop:0,transition:{duration:0.6,delay:2.5},}}} initial="hidden" animate="show"><i class="fa-solid fa-arrow-left"></i>Home</motion.button>
+    <motion.button onClick={()=>{history('/')}} variants={{hidden:{opacity: 0,marginTop:-200},show:{opacity:1,marginTop:0,transition:{duration:0.6,delay:2.5},}}} initial="hidden" animate="show"><i class="fa-solid fa-arrow-left"></i>Home</motion.button>
   </div>
 }
 

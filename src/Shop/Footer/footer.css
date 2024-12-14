@@ -1,0 +1,37 @@
+.FooterWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(to left,black 30%,#c32278 70%,black 100%);
+}
+
+.FooterWrapper p{
+    color: white;
+    font-family: "IM FELL Great Primer SC";
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.FooterWrapper section{
+    display: flex;
+    gap: 15px;
+}
+
+.FooterWrapper img{
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:750px){
+
+    .FooterWrapper{
+        justify-content: center;
+        background: linear-gradient(to right,#c32278 0%,black 50%,black);
+    }
+
+    .FooterWrapper p{
+        display: none;
+    }
+}
