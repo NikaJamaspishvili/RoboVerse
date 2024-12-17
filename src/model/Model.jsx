@@ -50,10 +50,10 @@ let parentVariants = {
  if(target){
   return <div className="modelWrapper">
    <button id="backButton"><i class="fa-solid fa-arrow-left" onClick={()=>{window.history.back()}}></i></button>
-  <Canvas id="modelWrapperCanvas" style={{height:"70%"}} camera={{ position: [4,4,4], fov: 75 }}>
+  <Canvas id="modelWrapperCanvas" style={{height:"70svh",maxWidth:"450px"}} camera={{ position: [4,4,4], fov: 75 }}>
    <OrbitControls/>
    <Environment preset="dawn"/>
-    <Suspense fallback={<Html><div>Loading...</div></Html>}>
+    <Suspense fallback={<Html><div><i class="fa-solid fa-spinner"></i></div></Html>}>
     {type === "companion" && <Companion scale={[1.5, 1.5, 1.5]} />}
     {type === "security" && <Security scale={[1.5, 1.5, 1.5]} />}
     {type === "household" && <Household scale={[2, 2, 2]} />}
@@ -64,7 +64,7 @@ let parentVariants = {
   <motion.section variants={parentVariants} initial="hidden" animate="show">
    
    <motion.div className="productHeader">
-    <motion.h1 variants={childrenVariants}>{target.name}</motion.h1>
+    <motion.h1 variants={childrenVariants}>{target.name.toUpperCase()}</motion.h1>
     <motion.h2 variants={childrenVariants}><span>By</span> RoboVerse</motion.h2>
    </motion.div>
     <motion.h3 variants={childrenVariants}>${target.price}</motion.h3>
@@ -72,7 +72,7 @@ let parentVariants = {
     <motion.p variants={childrenVariants}>{target.description}</motion.p>
     
     <motion.div  variants={childrenVariants} className="quantityButton">
-    <p>QUANTITY</p>
+    <p>Quantity</p>
     <div>
       <button onClick={()=>{quantity !== 0 && setQuantity(quantity-1)}}><i class="fa-solid fa-minus"></i></button>
       <p>{quantity}</p>

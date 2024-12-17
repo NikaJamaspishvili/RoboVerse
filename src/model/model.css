@@ -8,7 +8,8 @@
     display: flex;
     align-items: center;
     gap: 50px;
-    height: 100vh;
+    min-height: 100svh;
+    height: auto;
     padding: 0;
     border: 1px solid black;
     position: relative;
@@ -67,13 +68,14 @@
    font-size: 0.9rem;
    font-weight: 400;
    color: rgb(228, 228, 228);
+   max-width: 500px;
 }
 
 .quantityButton{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 .quantityButton > p{
@@ -119,6 +121,7 @@
     cursor: pointer;
     background: linear-gradient(99.05deg, #C824EC 0.07%, #DF308D 106.32%);
     box-shadow: 5px 5px 10px #711486;
+    min-width: 200px;
 }
 
 #backButton{
@@ -133,4 +136,33 @@
     color: white;
     font-size: 1.4rem;
     cursor: pointer;
+}
+
+
+@media only screen and (max-width:850px){
+    .modelWrapper{
+        flex-direction: column;
+        gap: 70px;
+        padding-bottom: 30px;
+    }
+
+    .modelWrapper section{
+      order: 0;
+      gap: 40px;
+      padding-top: 100px;
+    }
+
+    .productHeader{
+        margin-bottom:10px;
+    }
+
+    #modelWrapperCanvas{
+        order: 1;
+        border: 1px solid #DF308D;
+        border-radius: 20px;
+    }
+}
+
+@media (hover:hover){
+    /*hover buttons*/
 }
