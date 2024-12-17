@@ -1,3 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 .modelWrapper{
     color: white;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 100vh;
+    padding: 0;
+    border: 1px solid black;
+    position: relative;
+}
+
+#modelWrapperCanvas{
+    border: 1px solid black;
+}
+
+.modelWrapper section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.productHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+    margin-bottom: 50px;
+}
+
+.productHeader h1{
+    font-size: 4rem;
+    font-family: "Lora";
+    font-weight: 600;
+}
+
+.productHeader h2 span{
+    font-size: 0.9rem;
+    color: rgb(141, 138, 138);
+}
+
+.productHeader h2{
+    font-size: 0.6rem;
+    font-family: "Lora";
+    font-weight: lighter;
+}
+
+.modelWrapper section h3{
+    font-size: 2rem;
+    border-bottom: 1px solid #DF308D;
+    padding-bottom: 10px;
+    background: linear-gradient(99.05deg, #C824EC 0.07%, #DF308D 106.32%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.modelWrapper section > p{
+   text-align: center;
+   width: 90%;
+   font-family: "inter";
+   font-size: 0.9rem;
+   font-weight: 400;
+   color: rgb(228, 228, 228);
+}
+
+.quantityButton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantityButton > p{
+    font-family: "orbitron";
+    letter-spacing:2px;
+}
+
+.quantityButton div{
+    display: flex;
+    gap: 5px;
+    background-color: rgb(255, 255, 255);
+    width: 100px;
+    height:40px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.quantityButton div button{
+    background-color: transparent;
+    border: 0;
+    font-size:1.3rem;
+    color: rgb(93, 90, 90);
+    cursor: pointer;
+}
+
+.quantityButton div p{
+    font-size: 1.3rem;
+    color: rgb(13, 13, 13);
+    font-family: "orbitron";
+    letter-spacing:5px;
+}
+
+.modelWrapper section > button{
+    color: white;
+    border: 0;
+    width: 45%;
+    height: 50px;
+    font-weight: bolder;
+    border-radius: 20px;
+    font-family: 'inter';
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: linear-gradient(99.05deg, #C824EC 0.07%, #DF308D 106.32%);
+    box-shadow: 5px 5px 10px #711486;
+}
+
+#backButton{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 50px;
+    height: 40px;
+    background: linear-gradient(99.05deg, #C824EC 0.07%, #DF308D 106.32%);
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
 }

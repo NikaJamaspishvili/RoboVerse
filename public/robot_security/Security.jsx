@@ -9,11 +9,14 @@ Title: P.U.C. security bot #7
 
 import React from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
+import { useEffect } from 'react'
+import { ArcCurve } from 'three'
 
 export default function Model(props) {
   const group = React.useRef()
   const { nodes, materials, animations } = useGLTF('/robot_security/security.gltf')
   const { actions } = useAnimations(animations, group)
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
