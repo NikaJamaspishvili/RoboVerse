@@ -3,11 +3,12 @@ import "./model.css";
 import { useParams } from "react-router-dom";
 
 import {Canvas,} from "@react-three/fiber";
-import {OrbitControls,Html,useProgress,Environment} from "@react-three/drei";
+import {OrbitControls,Html,useProgress,Environment, useFBO} from "@react-three/drei";
 
 import { motion } from "framer-motion";
 
-import { lazy, Suspense,useState } from "react";
+import { lazy, Suspense,useState,useEffect } from "react";
+import { Scene } from "three";
 
 const Companion = lazy(()=>(import('../../public/robot_companion/Companion.jsx')));
 const Household = lazy(()=>(import('../../public/robot_household/Household.jsx')));
@@ -16,9 +17,41 @@ const Education = lazy(()=>(import('../../public/robot_education/Education.jsx')
 
 function Model(){
   const {type} = useParams();
-  const {progress,active} = useProgress();
   
   const [quantity,setQuantity] = useState(0);
+  const [btnValue,setBtnValue] = useState("text");
+  const [seconds,setSeconds] = useState(0);
+  const [btnClick,setBtnClick] = useState(false);
+
+  const count = 7;
+
+  useEffect(() => {
+    if(btnClick === true){
+   if(seconds >= 0){
+    const timer = setTimeout(() => {
+      setSeconds((prevCount) => prevCount - 1);
+    }, 1000);
+
+    if (seconds === 2) {
+      setBtnValue('checkmark');
+    }
+
+    return () => clearTimeout(timer);
+  }else{
+      setBtnValue('text');
+      setBtnClick(false);
+  }
+  }
+  
+  }, [seconds,btnClick]);
+
+  function handleClick(){
+    if(btnValue === 'text'){
+      setBtnValue('empty');
+      setBtnClick(true);
+      setSeconds(7);
+    }
+  }
 
 let parentVariants = {
     hidden:{
@@ -80,7 +113,7 @@ let parentVariants = {
       </div>
     </motion.div>
 
-    <motion.button variants={childrenVariants}>BUY NOW</motion.button>
+    <motion.button style={{animation:btnValue !== "text" && "btnAnimation "+count+"s"}} onClick={handleClick} variants={childrenVariants}>{btnValue === "text" ? "BUY NOW":btnValue === "checkmark" && <i class="fa-solid fa-check"></i>}</motion.button>
   </motion.section>
 
 </div>

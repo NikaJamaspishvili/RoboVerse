@@ -68,7 +68,7 @@ function onShopBtnClick(){
       <motion.h1 variants={{hidden:{opacity:0},show:{opacity:1}}}>Let’s buy the best Robots for you</motion.h1>
       <motion.p variants={{hidden:{opacity:0},show:{opacity:1}}}>Robots are a great way to solve everyday problems, tasks and deadlines without overwhelming ourselves</motion.p>
      <div className="heroBtnDiv">
-     <motion.button variants={{hidden:{opacity:0},show:{opacity:1}}}>Start Shopping</motion.button>
+     <motion.button variants={{hidden:{opacity:0},show:{opacity:1}}} onClick={()=>{history('/shop')}}>Start Shopping</motion.button>
      <motion.button variants={{hidden:{opacity:0},show:{opacity:1}}} onClick={onBtnClick}>Explore Us</motion.button>
      </div>
      </motion.div>

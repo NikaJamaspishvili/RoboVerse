@@ -9,6 +9,8 @@ import {motion,useScroll,useAnimation,useTransform,useInView} from "framer-motio
 //react imports
 import { useEffect, useRef } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 
 //main about component which is root for all other components
 const About = ({bodyRef}) => {
@@ -61,7 +63,7 @@ const AboutCompany = () => {
       <motion.section style={{translateX: textSectionValue}} className="AboutCompanyText">
         <h1>High Quality Robots</h1>
         <p>Our Company Provides you with the  highest quality robots on the market to choose from.</p>
-        <button>Buy Now</button>
+        <button onClick={()=>{history('/shop')}}>Buy Now</button>
       </motion.section>
       </div>
 
@@ -94,6 +96,8 @@ const AboutCompany = () => {
 //component which renders robot section of the about page
 const AboutRobot = () => {
 
+    let history = useNavigate();
+
     const sectionRef = useRef();
 
     const cardAnimationVariants = { 
@@ -120,7 +124,7 @@ const AboutRobot = () => {
     <h1>Different species:</h1>
 
     <motion.section ref={sectionRef} variants={cardAnimationVariants} initial='hidden' animate={mainControls}>
-        <motion.div variants={{hidden:{opacity:0},visible:{opacity:1}}}>
+        <motion.div onClick={()=>{history('/model/household')}} variants={{hidden:{opacity:0},visible:{opacity:1}}}>
             <article>
                 <h1>House Hold</h1>
                 <p>Makes All Your Household Tasks.</p>
@@ -128,7 +132,7 @@ const AboutRobot = () => {
             <button>View Robots <i class="fa-solid fa-arrow-right"></i></button>
         </motion.div>
 
-        <motion.div variants={{hidden:{opacity:0},visible:{opacity:1}}}>
+        <motion.div onClick={()=>{history('/model/security')}} variants={{hidden:{opacity:0},visible:{opacity:1}}}>
             <article>
                 <h1>Security</h1>
                 <p>Protects Your Home and You From anything considered dangerous.</p>
@@ -136,7 +140,7 @@ const AboutRobot = () => {
             <button>View Robots <i class="fa-solid fa-arrow-right"></i></button>
         </motion.div>
 
-        <motion.div variants={{hidden:{opacity:0},visible:{opacity:1}}}>
+        <motion.div onClick={()=>{history('/model/companion')}} variants={{hidden:{opacity:0},visible:{opacity:1}}}>
             <article>
                 <h1>Companion</h1>
                 <p>Conversation capabilities, emotional support, entertainment options.</p>
@@ -144,7 +148,7 @@ const AboutRobot = () => {
             <button>View Robots <i class="fa-solid fa-arrow-right"></i></button>
         </motion.div>
 
-        <motion.div variants={{hidden:{opacity:0},visible:{opacity:1}}}>
+        <motion.div onClick={()=>{history('/model/education')}} variants={{hidden:{opacity:0},visible:{opacity:1}}}>
             <article>
                 <h1>Education</h1>
                 <p>Personalized learning plans, interactive quizzes, progress tracking...</p>
