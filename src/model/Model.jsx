@@ -61,7 +61,7 @@ let parentVariants = {
       opacity:1,
       transition:{
         duration:2,
-        staggerChildren:.2
+        staggerChildren:0.2
       }
     }
   }
