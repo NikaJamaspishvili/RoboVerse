@@ -12,3 +12,16 @@
 
 ## Purpose
 This project was created in order to learn 3D model integration into websites and learn more about animations and design in general.
+
+## Installation and Usage
+
+1. Clone repository
+2. open project root folder
+3. navigate to client sub-folder: "cd client"
+4. install dependencies: "npm install"
+5. run the application: "npm run dev"
+
+
+## Live Version:
+
+https://robotshop.netlify.app/
