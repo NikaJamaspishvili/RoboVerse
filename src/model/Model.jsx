@@ -67,7 +67,7 @@ function Model(){
     <i className="fa-solid fa-arrow-left" onClick={() => { window.history.back() }}></i>
   </button>
   
-    <Canvas id="modelWrapperCanvas" style={{ height: "70svh", maxWidth: "450px",display:"flex",justifyContent:"center",alignItems:"center" }} camera={{ position: [4, 4, 4], fov: 75 }}>
+    <Canvas id="modelWrapperCanvas" style={{ height: "70svh", maxWidth: "450px",width:"100%"}} camera={{ position: [4, 4, 4], fov: 75 }}>
       <OrbitControls />
       <Environment preset="dawn" />
       <Suspense fallback={<Html> 

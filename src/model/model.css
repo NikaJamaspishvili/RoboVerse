@@ -135,12 +135,13 @@
 
 #spinningBar{
 font-size: 1.1rem;
-width: 200px;
+width: 300px;
 display: flex;
 flex-direction: column;
 align-items: center;
 gap: 25px;
 font-family: "Inter";
+margin-left: -150px;
 }
 
 #spinningBar i{
@@ -180,6 +181,12 @@ font-family: "Inter";
         order: 1;
         border: 1px solid #DF308D;
         border-radius: 20px;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .productHeader h1{
+        font-size: 2.5rem;
     }
 }
 
