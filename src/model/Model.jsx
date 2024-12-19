@@ -5,11 +5,9 @@ import { useParams } from "react-router-dom";
 import {Canvas} from "@react-three/fiber";
 import {OrbitControls,Html,Environment} from "@react-three/drei";
 
-import { motion,AnimatePresence } from "framer-motion";
-
 import { lazy, Suspense,useState,useEffect,useRef } from "react";
 
-import Companion from "../../public/robot_companion/Companion.jsx";
+const Companion = lazy(()=>(import('../../public/robot_companion/Companion.jsx')));
 const Household = lazy(()=>(import('../../public/robot_household/Household.jsx')));
 const Security = lazy(()=>(import('../../public/robot_security/Security.jsx')));
 const Education = lazy(()=>(import('../../public/robot_education/Education.jsx')));
@@ -22,7 +20,6 @@ function Model(){
   const [btnValue,setBtnValue] = useState("text");
   const [seconds,setSeconds] = useState(0);
   const [btnClick,setBtnClick] = useState(false);
-  const [isModelLoaded,setIsModelLoaded] = useState(true);
 
   const count = 7;
 
@@ -55,24 +52,6 @@ function Model(){
     }
   }
 
-let parentVariants = {
-    hidden:{
-      opacity:0,
-    },
-    visible:{
-      opacity:1,
-      transition:{
-        duration:2,
-        staggerChildren:0.2
-      }
-    },
-  }
-
-  let childrenVariants = {
-    hidden:{opacity:0},
-    visible:{opacity:1}
-  }
-
   const array = [
   {name:"companion",price:1999,module:"<Companion />",description:"Your perfect little friend! This adorable companion robot is designed to keep you company, brighten your day, and respond to your emotions. Its cute size and playful features make it a joy to have around.",},
   {name:"security",price:2500,module:"<Security />",description:"Small in size but big on protection! This charming security robot keeps an eye on your space with advanced monitoring features, all while looking too cute to be intimidating."},
@@ -88,10 +67,15 @@ let parentVariants = {
     <i className="fa-solid fa-arrow-left" onClick={() => { window.history.back() }}></i>
   </button>
   
-    <Canvas id="modelWrapperCanvas" style={{ height: "70svh", maxWidth: "450px" }} camera={{ position: [4, 4, 4], fov: 75 }}>
+    <Canvas id="modelWrapperCanvas" style={{ height: "70svh", maxWidth: "450px",display:"flex",justifyContent:"center",alignItems:"center" }} camera={{ position: [4, 4, 4], fov: 75 }}>
       <OrbitControls />
       <Environment preset="dawn" />
-      <Suspense fallback={<Html><div><i className="fa-solid fa-spinner"></i></div></Html>}>
+      <Suspense fallback={<Html> 
+    <div id="spinningBar">
+    <p>Loading 3D Model</p>
+    <i className="fa-solid fa-spinner"></i>
+    </div>
+    </Html>}>
         {type === "companion" && <Companion scale={[1.5, 1.5, 1.5]} />}
         {type === "security" && <Security scale={[1.5, 1.5, 1.5]} />}
         {type === "household" && <Household scale={[2, 2, 2]} />}
@@ -99,15 +83,14 @@ let parentVariants = {
       </Suspense>
     </Canvas>
   
-  <AnimatePresence mode="wait">
-    <motion.section key={type} variants={parentVariants} initial="hidden" animate="visible">
-      <motion.div className="productHeader">
-        <motion.h1 variants={childrenVariants}>{target.name.toUpperCase()}</motion.h1>
-        <motion.h2 variants={childrenVariants}><span>By</span> RoboVerse</motion.h2>
-      </motion.div>
-      <motion.h3 variants={childrenVariants}>${target.price}</motion.h3>
-      <motion.p variants={childrenVariants}>{target.description}</motion.p>
-      <motion.div variants={childrenVariants} className="quantityButton">
+    <section>
+      <div className="productHeader">
+        <h1>{target.name.toUpperCase()}</h1>
+        <h2><span>By</span> RoboVerse</h2>
+      </div>
+      <h3>${target.price}</h3>
+      <p>{target.description}</p>
+      <div className="quantityButton">
         <p>Quantity</p>
         <div>
           <button onClick={() => { quantity !== 1 && setQuantity(quantity - 1) }}>
@@ -118,12 +101,11 @@ let parentVariants = {
             <i className="fa-solid fa-plus"></i>
           </button>
         </div>
-      </motion.div>
-      <motion.button style={{ animation: btnValue !== "text" && "btnAnimation " + count + "s" }} onClick={handleClick} variants={childrenVariants}>
+      </div>
+      <button style={{ animation: btnValue !== "text" && "btnAnimation " + count + "s" }} onClick={handleClick}>
         {btnValue === "text" ? "BUY NOW" : btnValue === "checkmark" && <i className="fa-solid fa-check"></i>}
-      </motion.button>
-    </motion.section>
-  </AnimatePresence>
+      </button>
+    </section>
 </div>
 
  }
