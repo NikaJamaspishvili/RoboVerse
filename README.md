@@ -1,8 +1,14 @@
-# React + Vite
+# RoboVerse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**RoboVerse** is a fun, frontend-only project created to demonstrate my skills in modern web development. It showcases an e-commerce website where users can explore and "purchase" robots designed for various purposes like companionship, household tasks, security, and education.
 
-Currently, two official plugins are available:
+> **Note:** This project is for skill demonstration purposes only and is not intended for real-world use.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Frontend Framework:** Built with React.
+- **Routing:** Implemented using React Router DOM.
+- **3D Models:** Integrated using React Three Fiber for an immersive experience.
+- **Animations:** Added smooth animations with Framer Motion.
+
+## Purpose
+This project was created in order to learn 3D model integration into websites and learn more about animations and design in general.
