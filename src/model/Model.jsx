@@ -18,7 +18,7 @@ const Education = lazy(()=>(import('../../public/robot_education/Education.jsx')
 function Model(){
   const {type} = useParams();
   
-  const [quantity,setQuantity] = useState(0);
+  const [quantity,setQuantity] = useState(1);
   const [btnValue,setBtnValue] = useState("text");
   const [seconds,setSeconds] = useState(0);
   const [btnClick,setBtnClick] = useState(false);
@@ -107,7 +107,7 @@ let parentVariants = {
     <motion.div  variants={childrenVariants} className="quantityButton">
     <p>Quantity</p>
     <div>
-      <button onClick={()=>{quantity !== 0 && setQuantity(quantity-1)}}><i class="fa-solid fa-minus"></i></button>
+      <button onClick={()=>{quantity !== 1 && setQuantity(quantity-1)}}><i class="fa-solid fa-minus"></i></button>
       <p>{quantity}</p>
       <button onClick={()=>{setQuantity(quantity+1)}}><i class="fa-solid fa-plus"></i></button>
       </div>
