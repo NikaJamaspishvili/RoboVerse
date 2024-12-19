@@ -11,13 +11,9 @@
     min-height: 100svh;
     height: auto;
     padding: 0;
-    border: 1px solid black;
     position: relative;
 }
 
-#modelWrapperCanvas{
-    border: 1px solid black;
-}
 
 .modelWrapper section{
     display: flex;
