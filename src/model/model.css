@@ -165,12 +165,12 @@
 @media (hover:hover){
     #backButton:hover{
         transform: scale(1.1) rotateY(360deg);
-        transition: all 0.5s ease-in-out;
+        transition: all 0.4s ease-in-out;
     }
 
     #backButton:not(:hover){
         transform: scale(1);
-        transition: all 0.3s ease;
+        transition: all 0.4s ease-in-out;
     }
 
     .modelWrapper section > button:hover{
@@ -180,7 +180,7 @@
 
     .modelWrapper section > button:not(:hover){
         transform: scale(1);
-        transition: all 0.2s ease-in;
+        transition: all 0.2s ease;
     }
 }
 
