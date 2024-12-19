@@ -22,6 +22,7 @@ function Model(){
   const [btnValue,setBtnValue] = useState("text");
   const [seconds,setSeconds] = useState(0);
   const [btnClick,setBtnClick] = useState(false);
+  const [isMounted,setIsMounted] = useState(false);
 
   const count = 7;
 
@@ -44,6 +45,11 @@ function Model(){
   }
   
   }, [seconds,btnClick]);
+
+  useEffect(() => {
+    setIsMounted(true);
+    return () => setIsMounted(false);
+  }, []);
 
   function handleClick(){
     if(btnValue === 'text'){
@@ -94,7 +100,7 @@ let parentVariants = {
     </Suspense>
   </Canvas>
 
-  <motion.section variants={parentVariants} initial="hidden" animate="show">
+  {isMounted && <motion.section key={type} variants={parentVariants} initial="hidden" animate="show">
    
    <motion.div className="productHeader">
     <motion.h1 variants={childrenVariants}>{target.name.toUpperCase()}</motion.h1>
@@ -115,6 +121,7 @@ let parentVariants = {
 
     <motion.button style={{animation:btnValue !== "text" && "btnAnimation "+count+"s"}} onClick={handleClick} variants={childrenVariants}>{btnValue === "text" ? "BUY NOW":btnValue === "checkmark" && <i class="fa-solid fa-check"></i>}</motion.button>
   </motion.section>
+  }
 
 </div>
  }
