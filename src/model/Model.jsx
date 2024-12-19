@@ -17,7 +17,7 @@ const ref = useRef();
 
 useFrame(()=>{
  if(ref.current){
-  ref.current.rotation.y+=0.003;
+  ref.current.rotation.y+=0.001;
  }
 })
 
